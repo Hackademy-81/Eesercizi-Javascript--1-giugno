@@ -145,12 +145,12 @@ if (startGame==1) {
 
        let win= alert(`Hai indovinato il numero corretto e la combinazione vincente è ${numr}`);
 
-       enemy= alert("La seconda prova consiste nel lanciare un dado per 10 volte...se il punteggio accumulato sarà elevato, riuscirai a guadagnare denaro sufficiente per riscattare la liberazione della regina");
+       enemy= alert("La seconda prova consiste nel lanciare un dado per 7 volte...se il punteggio accumulato sarà elevato, riuscirai a guadagnare denaro sufficiente per riscattare la liberazione della regina");
 
        let punteggio= 0;
-       let random= Math.floor(Math.random() * (6) + 1);
 
-      for (let i=1; i<=10; i++) {
+      for (let i=1; i<=7; i++) {
+        let random= Math.floor(Math.random() * (6) + 1);
         punteggio= punteggio + random;
         let dado= alert (`Al tiro di dado numero ${i}, è uscito ${random} ed il punteggio totalizzato è ${punteggio}`);
 
@@ -163,15 +163,17 @@ if (startGame==1) {
             case punteggio>=6 && punteggio<12:
                 enemy= alert ("punteggio non male, ma hai perso!");
                 break;
-            case punteggio>=12 && punteggio<20:
+            case punteggio>=12 && punteggio<30:
                 enemy= alert ("ci è mancato poco...hai perso!");
                 break;
-            case punteggio>=20:
+            case punteggio>=30:
                 enemy= alert("FANTASTICO...hai vinto!Hai liberato la regina!!!");
                 break;
             default:
                 enemy= alert("il punteggio non è valido");
         }
+
+        
 
     }
 
